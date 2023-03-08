@@ -1,0 +1,3 @@
+This is the day that the LORD hath made.
+I will rejoice and be glad in it.
+Tomorrow we will be starting Python programming language at ALX Africa SE (06/03/2023)
