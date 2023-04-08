@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def factorize(val: int) -> list | bool:
     local_factor = []
     i_fact = 2    
@@ -56,8 +58,8 @@ def read_from_file(file_name: str) -> None:
 
 
 def use_random() -> None:
-    lower_range = r.randint(5, 10)
-    upper_range = r.randint(100, 1000)
+    lower_range = r.randint(10, 100)
+    upper_range = r.randint(100, 100000)
     number_gen = r.randint(lower_range, upper_range)
     factors = get_factors(number_gen)
     prime_mult_fact = factors_are_prime(factors)
@@ -74,10 +76,12 @@ def use_random() -> None:
 if __name__ == "__main__":
     from sys import argv
     import random as r
-
-    if len(argv) == 2:
-        filename = argv[1]
-        read_from_file(filename)
-    else:    
-        use_random()
-                
+    
+    try:
+        if len(argv) == 2:
+            filename = argv[1]
+            read_from_file(filename)
+        else:    
+            use_random()
+    except KeyboardInterrupt:
+        print("Program was interrupted.")
