@@ -1,11 +1,38 @@
 #!/usr/bin/python3
+"""Module that allows manipulates a JSON file.
+The following operations can be carried out:
+1. Addition or writing to a JSON file
+2. Viewing or reading from a JSON file.
+3. Editting or updating a selected dataset in a JSON file.
+4. Deleting a selected dataset from the JSON file."""
 
-def write_to_json(data, fn):
-    with open(fn, mode="w", encoding="utf-8") as f:
-        json.dump(data, f, indent=3)
-        return True
+def write_to_json(data:list, fn:str) -> bool | None:
+    """custom function to write or add data to a JSON file.
+
+    Args:
+        data (list): list of dictionaries to be added to file
+        fn (str): the file to write `data` to
+
+    Return:
+        True if `data` is successfully written to `fn`
+        None if unsuccessful
+    """
+    if type(data) is not list:
+        raise TypeError("Invalid data cannot be added.")
+    if fn == "" or fn is None:
+        raise Exception("Filename is required.")
+    try:
+        with open(fn, mode="w", encoding="utf-8") as f:
+            json.dump(data, f, indent=3)
+            return True
+    except TypeError as err:
+        print(err)
+    except (FileNotFoundError, Exception) as err:
+        print(err)
+    except (KeyboardInterrupt, EOFError):
+        print("\nProgram was halted.")
+        exit()
     return
-
 
 def read_from_json(fn):
     with open(fn, mode="r") as f:
@@ -99,8 +126,8 @@ if __name__ == "__main__":
             prompt()
             choice = input("Choose: ")
             if choice == "1":
-                add_data(filename)
-                print("\nAdded Successfully.\n\n")
+                if add_data(filename) is True:
+                    print("\nAdded Successfully.\n\n")
             elif choice == "2":
                 print("\nViewing Data\n")
                 view_data(filename)
