@@ -1,1 +1,16 @@
-[]
+[
+   {
+      "age": 32,
+      "email": "j.doe@email.com",
+      "firstname": "John",
+      "gender": "MALE",
+      "lastname": "Doe"
+   },
+   {
+      "age": 27,
+      "email": "jane.doe@email.com",
+      "firstname": "Jane",
+      "gender": "FEMALE",
+      "lastname": "Doe"
+   }
+]

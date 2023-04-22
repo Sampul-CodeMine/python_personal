@@ -51,7 +51,7 @@ def accept_int(prompt: str) -> int | None:
         try:
             data = input(f"Enter {prompt}: ")
             if data == '':
-                raise Exception("Age is required")
+                raise Exception("Data is required")
             if data.isdigit():
                 data = int(data)
                 if type(data) == int:
@@ -342,6 +342,7 @@ if __name__ == "__main__":
     import json
     filename = "persons.json"
 
+    clear_screen()
     while True:
         try:
             prompter()
