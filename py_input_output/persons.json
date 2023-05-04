@@ -1,5 +1,6 @@
 [
    {
+<<<<<<< HEAD
       "age": 32,
       "email": "j.doe@email.com",
       "firstname": "John",
@@ -12,5 +13,20 @@
       "firstname": "Jane",
       "gender": "FEMALE",
       "lastname": "Doe"
+=======
+      "firstname": "Test",
+      "lastname": "User",
+      "age": "23"
+   },
+   {
+      "firstname": "Admin",
+      "lastname": "User",
+      "age": "50"
+   },
+   {
+      "firstname": "User",
+      "lastname": "Root",
+      "age": "45"
+>>>>>>> 3b955d8 (Some more tasks)
    }
 ]
