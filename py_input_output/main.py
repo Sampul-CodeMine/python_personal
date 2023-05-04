@@ -32,18 +32,8 @@ def prompter():
     """
     print(prompt)
 
-<<<<<<< HEAD
 def accept_int(prompt: str) -> int | None:
     """This is function that accepts integer input from a user.
-=======
-def get_data():
-    fname = input("First Name: ")
-    lname = input("Last Name: ")
-    age = input("Age: ")
-    data = {"firstname": fname, "lastname": lname, "age": age}
-    return data
->>>>>>> 3b955d8 (Some more tasks)
-
     Args:
         prompt (str): Prompt to specify the datatype to input.
 
@@ -392,6 +382,3 @@ if __name__ == "__main__":
         except (KeyboardInterrupt, EOFError):
             print("\nProgram Interrupted\n")
             exit(1)
-
-    
-
